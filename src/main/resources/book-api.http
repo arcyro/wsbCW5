@@ -1,0 +1,14 @@
+### GET request to example server
+GET https://examples.http-client.intellij.net/get
+    ?generated-in=IntelliJ IDEA
+
+###
+### Send POST request with json body
+POST http://localhost:8081/api/books
+Content-Type: application/json
+
+{
+  "title": "Effective Java",
+  "publicationYear": 1999,
+  "isbn": "1234567890"
+}

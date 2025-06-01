@@ -1,9 +1,6 @@
 package pl.merito.demo.api;
 
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import pl.merito.demo.Book;
 import pl.merito.demo.BookRepository;
 
@@ -23,5 +20,10 @@ public class BookApiController {
     @GetMapping
     public List<Book> getAll() {
         return bookRepository.findAll();
+    }
+
+    @PostMapping
+    public Book save(@RequestBody Book book) {
+        return bookRepository.save(book);
     }
 }

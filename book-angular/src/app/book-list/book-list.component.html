@@ -1,7 +1,22 @@
-<h3> Book List </h3>
-
-<ul>
-  <li *ngFor="let book of books">
-    <span>{{ book.title }} -  {{book.isbn}}
-      - {{book.publicationYear}}</span>
-</ul>
+<h3>Book List</h3>
+<a routerLink="/book/add" class="btn btn-primary mb-3">Add New Book</a>
+<br/>
+<br/>
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>ISBN</th>
+      <th>Publication Year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let book of books">
+      <td>{{ book.id }}</td>
+      <td>{{ book.title }}</td>
+      <td>{{ book.isbn }}</td>
+      <td>{{ book.publicationYear }}</td>
+    </tr>
+  </tbody>
+</table>

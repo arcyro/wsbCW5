@@ -1,0 +1,17 @@
+<h2>Dodaj książkę</h2>
+
+<form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+  <div class="form-group mb-3">
+    <label>Tytuł</label>
+    <input type="text" placeholder="Tytuł" class="form-control" formControlName="title">
+  </div>
+  <div class="form-group mb-3">
+    <label>ISBN</label>
+    <input type="text" placeholder="ISBN" class="form-control" formControlName="isbn">
+  </div>
+  <div class="form-group mb-3">
+    <label>Rok publikacji</label>
+    <input type="number" placeholder="Rok publikacji" class="form-control" formControlName="publicationYear">
+  </div>
+  <button type="submit" class="btn btn-primary">Dodaj książkę</button>
+</form>

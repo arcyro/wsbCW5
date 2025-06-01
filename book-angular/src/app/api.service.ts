@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
+import {Book} from './book';
 
 @Injectable({
   providedIn: 'root'
@@ -14,5 +15,8 @@ export class ApiService {
 
   getBooks():Observable<any> {
     return this.httpClient.get(this.apiUrl);
+  }
+  saveBook(book: Book) {
+    return this.httpClient.post(this.apiUrl, book);
   }
 }
